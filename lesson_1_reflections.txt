@@ -1,0 +1,39 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    + sign showed the things that are introduced in new file.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+It helps us because we can easily rollback to previous version( or retrive it in no time) and see what errors have we made n new file.
+    
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+    pros: commit whenever you want
+    Granularity is at commiter's disposal
+    commit at each logical change made 
+    cons: 
+    we may forget to commit when we should fo it
+    It can be too late when we notice we should have made a commit.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git is mostly used for programs, the big ones having several files which comprise one logical group and these files may have interdependencies. on the other hand, Google docs is used mainly for documents, when each single file consistes a meaningful piece and several files may not be interrelated and need separate attention for changes.
+
+How can you use the commands git log and git diff to view the history of files?
+ Using git log command we get a structured data of commits with IDs, author, date and commit message which we can use to find which change was made and when.it lists summary of all changes made in repositories.  using git diff command we can see differences or changes made  between two commits, what was inserted and what was deleted. 
+
+ log shows commits in the repositories prior to the current commit. commit is a snapshot of every file in the repository ever since the commit was made. Temporarily change ur files to how they were at the time of any commit is git checkout( restoring previous versions)
+    
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    We can change any important feature as we can always revert back to the previous versions and make changes to remove any bug introduced. Using git checkout we can revert to any version and check if bug was first introduced there an then compare it with its previous version to see what changes were made and do the needful.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    To wite programs for app.
