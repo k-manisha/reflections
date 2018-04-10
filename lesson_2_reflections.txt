@@ -1,22 +1,32 @@
 What happens when you initialize a repository? Why do you need to do it?
-A .git file is created and it tracks all the files inside that directory.
-An empty repository is created which contains no commit. we need it to keep track of files we want.
+	A .git file is created and it tracks all the files inside that directory.
+	An empty repository is created which contains no commit. we need it to keep track of files we want. It doesn't automatically adds files.
 
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
-staging area is intermediate stage while making commit. files from working directory are added to staging area one at a time and then commit is made to store that logical change in repository which is the snapshot of current state of file.
-Gives more control and allows to make commits small with one commit per logical change. specifies exactly what changes to be committed. Entire content of  area bundled into single commit and added to repository
+	staging area is intermediate area for files which we want to include in commit next time. files from working directory are added to staging area one at a time and then commit is made to store that logical change in repository which is the snapshot of current state of file.
+	
+	Gives more control and allows to make commits small with one commit per logical change. specifies exactly what changes to be committed. Entire content of  area bundled into single commit and added to repository. It helps to divide changes in working dirctory into several smll commits, each consisting of group of changes representing one logica change in file.
 
 How can you use the staging area to make sure you have one commit per logical
 change?
-
+	 Using git add 'filename' we can add one file at a time or more related to one logical change and after staging all the files, use git commit to make a commit. Then stage other set of files and make commit.
+  
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+	When we want to add some experimental features while keeping the main file working i.e, keeping production level file from breaking, branches are useful.
+	Make a new experimental branch for any any new feature and functionality that needs testing. After the experiment is successful and new feature is ready to be added to master branch, we can merge it to the master branch.
 
 How do the diagrams help you visualize the branch structure?
+	Diagrams help us to know the development of whole branch structure and time of their creation. They give the overview of whole structure of project and experiments done on them and allows us to merge the files we want.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+	All the commits in second branch is merged with the first one and the resulting commit is the merge commit and new head of the current branch( checkout branch).
+	The diagram shown by git log --graph shows that the merged commit has two parents which are previous heads of each branch merged. 
+
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+	pros: saves a lot of time and allows to have many experimental branches which can be merged later if thy have some needed features. 
+	cons: Conflict merging requires some effort
