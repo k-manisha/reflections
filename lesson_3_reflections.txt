@@ -19,7 +19,7 @@ use one instead of another?
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    It helps us to compare new additions and changes with last state and if there is some error, we can go back to previous state anytime
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
