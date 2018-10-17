@@ -1,32 +1,61 @@
 When would you want to use a remote repository rather than keeping all your work
 local?
 
-    I would use a remote repository to keep backup of my work, collaborate with people and to share my code with others.
+    I would use a remote repository to keep backup of my work, collaborate with other people and to share my code with others.
+    It is also useful to edit code from multiple computers and keep my code up to date on all computers.
 
 Why might you want to always pull changes manually rather than having Git
 automatically stay up-to-date with your remote repository?
 
-    I want to pull changes manually so that my contents or code don't change without my will and expectation. I may want to make changes again and again before pulling final change to a logic or block of code.
+    I want to pull changes manually so that my contents or code don't change without my will and expectation. I may want to make changes again and again before pulling final change to a logic or block of code. I may not want to pull code untill bug is fully fixed.
+   (If git automatically got updated with the local version, we might end up making things public before they are fully ready.)
 
 Describe the differences between forks, clones, and branches.  When would you
 use one instead of another?
-    fork is used to get some other person's repository into your github.
-    clone means to get a repository on your local machine for offline uses.
-    branches are used to keep master file entact and experiment on their copies so that finall change can be merged to master. 
-    this enables master to always stay error free.
+    All 3 are ways to add new changes without affecting the existing version.
+    fork is used to get a copy some other person's repository directly on github without pulling code to local machine first.
+    They are linked back to the original. IT can then be cloned to local machine. We can also work directly on github for small changes. It gives recognition to the original creator of repository.
+    clone means to pull down code from repository on github onto your local machine for offline uses. It downloads an existing repository on local machine. Cloning is needed when changes aren't simple enough implement on github directly.
+    clones don't need to know anything about original repository.
+    branches are used to keep master file entact and experiment on their copies so that final changes can be merged to master. 
+    This enables master to always stay error free. 
     
+    I use fork when i want to make changes to some repository public and I don't have permission to modify the original.
+    I clone a repository to local machine when i have to work offline rather than on github.
+    I use branch when i have to add some new and experimental changes keeping the easy reference to original code.
+    
+    changes are added to same repository using branches.
+    Forking and cloning are copying the entire repository to a new location.
+    We can clone any repository to anywhere we have access to but we can fork only a github repository to another location on Github.
 
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    It helps us to compare new additions and changes with last state and if there is some error, we can go back to previous state anytime
+    It helps us to compare new additions and changes with last state and if there is some error, we can go back to previous state anytime.
+    If I am offline and I want to know what the remote version is at some time, I have an easy way to access it. Also to merge the changes when offline, we need prvious state to be stored locally.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+
+   Without using Git and Github , I would collaborate using Dropbox and we would make changes on shared folder.
+   Google Docs is also very good for collaboration but not for codes. I won;t be able to detect someone else's change that induced error. So they are harder solution.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    I would like to make changes to separate branch if I am adding some experimental feature and want to test that while keeping the actual production code intact or working. I might not be sure if that feature would work.
+    If me and my collaborators all work on same branch, it can't work on separate features simultaneously. Make new branch for every feature or bug fix. After bug fix we might checkout to this new branch t make it master or merge if there are additional changes in other branches during that time.
+    So working in large group would be good if we using branches.
+    
+    If I am working alone then I would make changes directly on github if i know that I have to add this new feature.
+    
+    
+    ###About Remote
+     (Remote repository is provided by git to allow syncing data between two reposirories. It allows to store the location of a repository where we can send and receive commits to and from)
+    (git remote  //to see the name of all remote
+     git remote add origin #URL // to create a remote named origin with URL of repo created on github to push and pull changes
+     git remote -v  // to see the URLs
+     git remote  // gives name of remote i.e, origin
+     git push origin master  //to send changes to my remote. 2 args- remote i want to send changes to and the name of local branch that i want to push
+     git pull origin master  // to get changes made directly on github into local repository i,e, pull master branch from origin repo  2 args= remote , branch i want to pull like- master branc on remote)
